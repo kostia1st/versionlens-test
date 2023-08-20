@@ -1,0 +1,109 @@
+{
+  "name": "@local/xinix",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "/",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production PHASE=build next build",
+    "lint": "eslint **/*.ts*",
+    "lint:fix": "eslint **/*.ts* --fix",
+    "lint:quiet": "eslint **/*.ts* --quiet",
+    "prettier": "prettier . --write"
+  },
+  "browser": {
+    "@sentry/node": false,
+    "agentkeepalive": false,
+    "axios-cache-interceptor": false,
+    "device-detector-js": false
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "prettier --write",
+      "eslint"
+    ],
+    "src/**/*.{css,scss,json}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "@dnd-kit/core": "6.0.8",
+    "@dnd-kit/sortable": "7.0.2",
+    "@next/bundle-analyzer": "13.4.18",
+    "@novemberfiveco/lottie-react-light": "2.4.0",
+    "@paypal/react-paypal-js": "8.1.3",
+    "@sentry/browser": "7.64.0",
+    "@sentry/node": "7.64.0",
+    "@stripe/react-stripe-js": "2.1.2",
+    "@stripe/stripe-js": "2.1.0",
+    "@svgr/webpack": "8.1.0",
+    "@tanstack/react-query": "4.32.6",
+    "@tanstack/react-query-devtools": "4.32.6",
+    "@local/api": "*",
+    "@local/ui": "*",
+    "@local/utils": "*",
+    "agentkeepalive": "4.5.0",
+    "autosuggest-highlight": "3.3.4",
+    "axios": "1.4.0",
+    "axios-cache-interceptor": "1.2.0",
+    "clsx": "2.0.0",
+    "cross-env": "7.0.3",
+    "device-detector-js": "3.0.3",
+    "fast-deep-equal": "3.1.3",
+    "formik": "2.4.3",
+    "https": "1.0.0",
+    "lodash.clonedeep": "4.5.0",
+    "lottie-colorify": "0.8.0",
+    "mailcheck": "1.1.1",
+    "micro-memoize": "4.1.2",
+    "next": "13.4.10",
+    "range-parser": "1.2.1",
+    "react": "18.2.0",
+    "react-collapsed": "4.0.4",
+    "react-content-loader": "6.2.1",
+    "react-custom-scrollbars-2": "4.5.0",
+    "react-dom": "18.2.0",
+    "react-loading-skeleton": "3.3.1",
+    "react-resize-detector": "9.1.0",
+    "react-transition-group": "4.4.5",
+    "sass": "1.66.0",
+    "slugify": "1.6.6",
+    "stripe": "13.2.0",
+    "ts-assert-exists": "1.0.5",
+    "uncaught": "0.0.5",
+    "url": "0.11.1",
+    "web-vitals": "3.4.0",
+    "yup": "1.2.0"
+  },
+  "devDependencies": {
+    "@statoscope/webpack-plugin": "5.26.2",
+    "@types/autosuggest-highlight": "3.2.0",
+    "@types/js-cookie": "3.0.3",
+    "@types/mailcheck": "1.1.33",
+    "@types/node": "20.5.0",
+    "@types/react": "18.0.37",
+    "@types/react-dom": "18.0.11",
+    "@types/react-transition-group": "4.4.6",
+    "@typescript-eslint/eslint-plugin": "6.4.0",
+    "@typescript-eslint/parser": "6.4.0",
+    "@local/config-base": "*",
+    "dotenv": "16.3.1",
+    "eslint": "8.47.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-import-resolver-typescript": "3.6.0",
+    "eslint-plugin-import": "2.28.0",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "eslint-plugin-prettier": "5.0.0",
+    "eslint-plugin-react": "7.33.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "husky": "4.3.0",
+    "lint-staged": "14.0.0",
+    "prettier": "3.0.2",
+    "typescript": "5.1.6"
+  }
+}

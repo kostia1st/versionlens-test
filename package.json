@@ -1,0 +1,39 @@
+{
+  "name": "root",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/azure",
+    "packages/clear-mind",
+    "packages/kite",
+    "packages/lorelaine",
+    "packages/marley",
+    "packages/parking",
+    "packages/quagmire",
+    "packages/roundabout",
+    "packages/vapor",
+    "packages/xinix",
+    "packages/config-base",
+    "packages/api",
+    "packages/ui",
+    "packages/utils"
+  ],
+  "scripts": {
+    "build": "turbo run build --no-daemon",
+    "dev": "turbo run dev --parallel --no-daemon",
+    "lint": "turbo run lint --no-daemon",
+    "lint:fix": "turbo run lint:fix --no-daemon",
+    "lint:quiet": "turbo run lint:quiet --no-daemon",
+    "prettier": "turbo run prettier --no-daemon",
+    "test": "turbo run test --no-daemon"
+  },
+  "devDependencies": {
+    "ts-node": "10.9.1",
+    "turbo": "1.10.12",
+    "typescript": "5.1.6"
+  },
+  "engines": {
+    "npm": ">=8.0.0",
+    "node": ">=16.0.0"
+  }
+}
